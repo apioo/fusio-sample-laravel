@@ -22,8 +22,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/apps', [\App\Http\Controllers\AppsController::class, 'show'])->middleware(['auth'])->name('apps');
-
 Route::get('/apps/create', [\App\Http\Controllers\AppsController::class, 'create'])->middleware(['auth'])->name('apps_create');
 Route::post('/apps/create', [\App\Http\Controllers\AppsController::class, 'submit'])->middleware(['auth'])->name('apps_submit');
+Route::get('/apps/{id}', [\App\Http\Controllers\AppsController::class, 'detail'])->middleware(['auth'])->name('apps_detail');
 
 require __DIR__.'/auth.php';

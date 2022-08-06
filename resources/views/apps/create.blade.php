@@ -11,21 +11,21 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form method="POST" action="{{ route('apps_submit') }}">
                         @csrf
-                        <div>
+                        <div class="mb-4">
                             <x-label for="name" :value="__('Name')" />
                             <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
                         </div>
-                        <div>
+                        <div class="mb-4">
                             <x-label for="url" :value="__('Url')" />
                             <x-input id="url" class="block mt-1 w-full" type="text" name="url" :value="old('url')" required />
                         </div>
-                        <div>
+                        <div class="mb-4">
                             <x-label :value="__('Scopes')" />
                             @foreach ($scopes as $scope)
                                 <label><x-input type="checkbox" name="scopes[]" value="{{ $scope->getName() }}" class="" /> {{ $scope->getName() }}</label>
                             @endforeach
                         </div>
-                        <x-button class="ml-3">
+                        <x-button class="">
                             {{ __('Submit') }}
                         </x-button>
                     </form>

@@ -28,7 +28,23 @@ class AppsController extends Controller
         }
 
         return view('apps.list', [
+            'apiUrl' => config('fusio.base_uri'),
             'apps' => $apps,
+        ]);
+    }
+
+    public function detail($id)
+    {
+        try {
+            $app = $this->client->consumerApp()->getConsumerAppByAppId($id)->consumerActionAppGet();
+        } catch (\Throwable $e) {
+            Log::error('An error occurred at Fusio: ' . $e->getMessage());
+
+            return redirect('apps');
+        }
+
+        return view('apps.detail', [
+            'app' => $app,
         ]);
     }
 
@@ -57,13 +73,19 @@ class AppsController extends Controller
             $app->setScopes($request->input('scopes'));
 
             $message = $this->client->consumerApp()->getConsumerApp()->consumerActionAppCreate($app);
-            if ($message->getSuccess() === false) {
-                Log::error('Could not create Fusio app: ' . $message->getMessage());
+            if ($message->getSuccess() === true) {
+                return redirect('apps');
+            } else {
+                return view('apps.error', [
+                    'message' => $message->getMessage()
+                ]);
             }
         } catch (\Throwable $e) {
             Log::error('An error occurred at Fusio: ' . $e->getMessage());
-        }
 
-        return redirect('apps');
+            return view('apps.error', [
+                'message' => $e->getMessage()
+            ]);
+        }
     }
 }
