@@ -44,7 +44,6 @@
                         </g>
                     </svg>
                 </div>
-
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-1">
                         <div class="p-6">
@@ -54,11 +53,10 @@
                             </div>
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-
                                     <p class="mb-2">Welcome! This is a sample Laravel application which integrates with the <a href="https://github.com/apioo/fusio-sdk-php-laravel" class="underline text-blue-600">Fusio Laravel SDK</a>.
-                                        <a href="https://github.com/apioo/fusio" class="underline text-blue-600">Fusio</a> is an open source API management system which
-                                        helps you to build and manage great APIs. In this sample app we show how you can integrate Fusio
-                                        into a Laravel app.</p>
+                                    <a href="https://github.com/apioo/fusio" class="underline text-blue-600">Fusio</a> is an open source API management system which
+                                    helps you to build and manage great APIs. In this sample app we show how you can integrate Fusio
+                                    into a Laravel app.</p>
 
                                     <h1 class="font-bold text-xl my-4">Configuration</h1>
                                     <p class="mb-2">At first you need to configure the following settings at the <code>.env</code> file:</p>
@@ -75,18 +73,16 @@
                                     <h1 class="font-bold text-xl my-4">Workflow</h1>
 
                                     <p class="my-2">Everytime a user registers at your Laravel-App we create a Fusio user in the background
-                                        s. <code>app/Listeners/LogRegistered.php</code>. The client uses the credentials from the configuration
-                                        so make sure that those credentials have the fitting permissions to create a user.</p>
+                                    s. <code>app/Listeners/LogRegistered.php</code>. The client uses the credentials from the configuration
+                                    so make sure that those credentials have the fitting permissions to create a user.</p>
 
                                     <p class="my-2">If a user authenticates at your Laravel-App we obtain an Access-Token from our Fusio instance
-                                        in the background and save the obtained Access-Token in the session s. <code>app/Listeners/LogLogin.php</code>
-                                        For further calls to the API we use then this Access-Token to work on behalf of the authenticated user.</p>
+                                    in the background and save the obtained Access-Token in the session s. <code>app/Listeners/LogLogin.php</code>
+                                    For further calls to the API we use then this Access-Token to work on behalf of the authenticated user.</p>
 
                                     <p>As example we have implemented an Apps page at the dashboard where the user can manage and
-                                        control all apps. If a user creates a new app he obtains an App-Key/Secret which he can use
-                                        to access your Fusio API.</p>
-
-
+                                    control all apps. If a user creates a new app he obtains an App-Key/Secret which he can use
+                                    to access your Fusio API.</p>
                                 </div>
                             </div>
                         </div>
