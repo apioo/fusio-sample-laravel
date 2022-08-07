@@ -566,16 +566,16 @@
         },
         {
             "name": "fusio/sdk-laravel",
-            "version": "v0.2.2",
+            "version": "v0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/apioo/fusio-sdk-php-laravel.git",
-                "reference": "0d14769bf2e8392313dc52110c8eade49e7c0f01"
+                "reference": "44abf07ba2fb8ba3c81d5a1f33182c9840788a80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apioo/fusio-sdk-php-laravel/zipball/0d14769bf2e8392313dc52110c8eade49e7c0f01",
-                "reference": "0d14769bf2e8392313dc52110c8eade49e7c0f01",
+                "url": "https://api.github.com/repos/apioo/fusio-sdk-php-laravel/zipball/44abf07ba2fb8ba3c81d5a1f33182c9840788a80",
+                "reference": "44abf07ba2fb8ba3c81d5a1f33182c9840788a80",
                 "shasum": ""
             },
             "require": {
@@ -618,7 +618,7 @@
             ],
             "support": {
                 "issues": "https://github.com/apioo/fusio-sdk-php-laravel/issues",
-                "source": "https://github.com/apioo/fusio-sdk-php-laravel/tree/v0.2.2"
+                "source": "https://github.com/apioo/fusio-sdk-php-laravel/tree/v0.2.3"
             },
             "funding": [
                 {
@@ -634,7 +634,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2022-08-06T17:38:55+00:00"
+            "time": "2022-08-06T21:06:46+00:00"
         },
         {
             "name": "graham-campbell/result-type",
