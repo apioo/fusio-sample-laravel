@@ -27,7 +27,7 @@ class LogRegistered
 
         try {
             $response = $this->client->backend()->backendUser()->getBackendUser()->backendActionUserCreate($user);
-            if ($response->getMessage() !== true) {
+            if ($response->getSuccess() !== true) {
                 Log::warning('Could not create Fusio user: ' . $response->getMessage());
             }
         } catch (\Throwable $e) {
